@@ -2,18 +2,15 @@
     --bg: #050505;
     --bg-elevated: #0f0f10;
     --panel: rgba(255, 255, 255, 0.05);
-    --panel-strong: rgba(255, 255, 255, 0.1);
     --text: #f4f1e8;
     --muted: #bbb4a5;
     --line: rgba(255, 255, 255, 0.12);
     --accent: #f0ea18;
-    --accent-deep: #c8b800;
     --accent-soft: rgba(240, 234, 24, 0.18);
     --pink: #e8267a;
     --shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
     --radius-xl: 36px;
     --radius-lg: 24px;
-    --radius-md: 18px;
     --max-width: 1200px;
 }
 
@@ -48,10 +45,18 @@ a {
     text-decoration: none;
 }
 
+code {
+    font-size: 0.92em;
+}
+
 .site-shell {
     width: min(calc(100% - 32px), var(--max-width));
     margin: 0 auto;
     padding: 24px 0 56px;
+}
+
+.site-shell-legal {
+    width: min(calc(100% - 32px), 1320px);
 }
 
 .site-header,
@@ -88,15 +93,20 @@ h3,
     text-transform: uppercase;
 }
 
-.site-nav {
+.site-nav,
+.footer-links {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
     gap: 18px;
     color: var(--muted);
 }
 
+.site-nav {
+    justify-content: flex-end;
+}
+
 .site-nav a:hover,
+.site-nav a[aria-current="page"],
 .footer-links a:hover,
 .link-tile:hover {
     color: var(--accent);
@@ -115,6 +125,10 @@ h3,
         linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01)),
         rgba(7, 7, 8, 0.88);
     box-shadow: var(--shadow);
+}
+
+.hero-compact {
+    align-items: stretch;
 }
 
 .hero-copy h1,
@@ -143,12 +157,15 @@ h3,
 .section p,
 .legal-content p,
 .faq-item p,
-.contact-card p {
+.contact-card p,
+.app-card p,
+.hero-panel p {
     color: var(--muted);
 }
 
 .hero-actions,
-.support-actions {
+.support-actions,
+.card-actions {
     display: flex;
     flex-wrap: wrap;
     gap: 14px;
@@ -202,15 +219,27 @@ h3,
     position: relative;
 }
 
+.hero-panel,
 .phone-frame,
 .gallery-card,
 .contact-card,
 .feature-card,
 .faq-item,
-.link-tile {
+.link-tile,
+.app-card {
     border: 1px solid var(--line);
     background: var(--panel);
     box-shadow: var(--shadow);
+}
+
+.hero-panel,
+.feature-card,
+.faq-item,
+.contact-card,
+.link-tile,
+.app-card {
+    border-radius: var(--radius-lg);
+    padding: 24px;
 }
 
 .phone-frame {
@@ -244,7 +273,9 @@ h3,
 .card-grid,
 .gallery-grid,
 .section-split,
-.support-layout {
+.support-layout,
+.app-directory,
+.app-card {
     display: grid;
 }
 
@@ -280,7 +311,8 @@ h3,
 .section-split h2,
 .disclaimer-section h2,
 .faq-item h3,
-.contact-card strong {
+.contact-card strong,
+.app-card h3 {
     margin: 0 0 12px;
 }
 
@@ -295,14 +327,6 @@ h3,
 .card-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 18px;
-}
-
-.feature-card,
-.faq-item,
-.contact-card,
-.link-tile {
-    border-radius: var(--radius-lg);
-    padding: 24px;
 }
 
 .feature-card h3,
@@ -361,7 +385,10 @@ h3,
 
 .link-tile {
     display: block;
-    border-radius: var(--radius-lg);
+}
+
+.link-tile-static {
+    cursor: default;
 }
 
 .link-tile-label {
@@ -382,6 +409,35 @@ h3,
     background: linear-gradient(135deg, rgba(240, 234, 24, 0.09), rgba(255, 255, 255, 0.03));
 }
 
+.app-directory {
+    gap: 18px;
+}
+
+.app-card {
+    grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
+    gap: 28px;
+    align-items: center;
+}
+
+.app-card-copy p {
+    margin-top: 0;
+}
+
+.app-card-featured {
+    background:
+        linear-gradient(135deg, rgba(232, 38, 122, 0.1), rgba(255, 255, 255, 0.02)),
+        var(--panel);
+}
+
+.app-card-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.app-card-visual .phone-frame {
+    width: min(100%, 320px);
+}
+
 .site-footer {
     margin-top: 72px;
     padding-top: 28px;
@@ -397,17 +453,6 @@ h3,
 .footer-copy {
     margin: 0;
     color: var(--muted);
-}
-
-.footer-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px;
-    color: var(--muted);
-}
-
-.site-shell-legal {
-    width: min(calc(100% - 32px), 1320px);
 }
 
 .legal-layout {
@@ -466,7 +511,8 @@ h3,
 @media (max-width: 1080px) {
     .hero,
     .section-split,
-    .legal-layout {
+    .legal-layout,
+    .app-card {
         grid-template-columns: 1fr;
     }
 
@@ -489,7 +535,8 @@ h3,
 }
 
 @media (max-width: 720px) {
-    .site-shell {
+    .site-shell,
+    .site-shell-legal {
         width: min(calc(100% - 20px), var(--max-width));
         padding-top: 16px;
     }
@@ -502,7 +549,9 @@ h3,
 
     .hero,
     .support-hero,
-    .disclaimer-section {
+    .disclaimer-section,
+    .hero-panel,
+    .app-card {
         padding: 22px;
     }
 

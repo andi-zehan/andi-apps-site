@@ -1,11 +1,13 @@
 # Files Map
 
-- `index.html` — Marketing landing page for Quick Meal Check with hero, feature grid, screenshot gallery, and privacy/support links.
-- `privacy.html` — Public privacy-policy page tailored to the app's current Firebase/Auth/OpenAI/StoreKit data flows.
-- `support.html` — Public support and FAQ page covering subscriptions, permissions, deletion, and contact placeholders.
-- `styles.css` — Shared site styling with the black-and-yellow marketing theme, responsive layout, and legal/support page formatting.
-- `content/privacy-policy.md` — Editable markdown draft of the privacy policy derived from the current app implementation.
-- `content/publish-checklist.md` — Short pre-launch checklist for replacing placeholders and aligning the site with the final app submission.
-- `content/files_map.md` — Inventory of source copy files used to maintain the site content.
-- `assets/files_map.md` — Inventory of imported website assets and nested screenshot files.
-- `assets/screenshots/files_map.md` — Inventory of marketing screenshots copied into the site for self-contained hosting.
+- `index.html` — Root Andi Apps homepage that introduces the portfolio and links to the app-specific subpages.
+- `styles/global.css` — Shared stylesheet for the portfolio homepage and all app pages.
+- `apps/quickmealcheck/index.html` — Quick Meal Check landing page under its dedicated app subpath.
+- `apps/quickmealcheck/privacy.html` — Quick Meal Check privacy-policy page for App Store and public legal links.
+- `apps/quickmealcheck/support.html` — Quick Meal Check support and FAQ page.
+- `apps/quickmealcheck/content/privacy-policy.md` — Editable markdown draft of the Quick Meal Check privacy policy.
+- `apps/quickmealcheck/content/publish-checklist.md` — Short pre-launch checklist for the Quick Meal Check app page.
+- `apps/quickmealcheck/assets/screenshots/hero-analysis.jpg` — Hero screenshot used on the Quick Meal Check app card and product page.
+- `apps/quickmealcheck/assets/screenshots/analysis-detail.jpg` — Screenshot of the Quick Meal Check nutrition-detail screen.
+- `apps/quickmealcheck/assets/screenshots/journal-view.jpg` — Screenshot of the Quick Meal Check meal journal.
+- `apps/quickmealcheck/assets/screenshots/body-metrics.jpg` — Screenshot of the Quick Meal Check body-metrics tools.
