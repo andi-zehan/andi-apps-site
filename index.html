@@ -4,89 +4,54 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Andi Apps</title>
-    <meta name="description" content="Independent app portfolio site for Andi Apps, with product pages, privacy links, and support pages for each app.">
+    <meta name="description" content="App collection by Andi — apps built for personal use, published to be helpful.">
     <link rel="stylesheet" href="styles/global.css">
 </head>
 <body>
     <div class="site-shell">
         <header class="site-header">
-            <a class="wordmark" href="index.html">Andi Apps</a>
+            
             <nav class="site-nav" aria-label="Primary">
+                <a href="index.html" aria-current="page">Welcome</a>
                 <a href="#apps">Apps</a>
-                <a href="#about">About</a>
-                <a href="apps/quickmealcheck/index.html">Quick Meal Check</a>
             </nav>
         </header>
 
         <main>
-            <section class="hero hero-compact">
-                <div class="hero-copy">
-                    <p class="eyebrow">Independent app portfolio</p>
-                    <h1>One site. Multiple apps. Clear support paths.</h1>
-                    <p class="lede">
-                        This site is now organized as a small app directory. Each app gets its own landing page,
-                        privacy page, support page, screenshots, and content files while the root site stays neutral.
+            <section class="welcome-hero">
+                <figure class="author-photo-wrap">
+                    <img class="author-photo" src="assets/andi.jpg" alt="Andi">
+                </figure>
+                <div class="welcome-text">
+                    <p class="eyebrow">App collection</p>
+                    <p class="welcome-body">
+                        Welcome to my app collection page! I develop apps for my own personal
+                        needs and publish the ones I find helpful. I hope you can find one to
+                        make your life easier.
                     </p>
-                    <div class="hero-actions">
-                        <a class="button button-primary" href="#apps">Browse Apps</a>
-                    </div>
-                </div>
-
-                <div class="hero-panel">
-                    <p class="callout-label">Current structure</p>
-                    <ul class="hero-notes">
-                        <li>Root page introduces the app portfolio</li>
-                        <li>Each app lives under its own subdirectory</li>
-                        <li>Shared styling sits in one common stylesheet</li>
-                    </ul>
+                    <p class="welcome-sign">Enjoy,<br><em>Andi</em></p>
                 </div>
             </section>
 
             <section class="section" id="apps">
-                <div class="section-heading">
-                    <p class="eyebrow">Apps</p>
-                    <h2>Product pages live under dedicated subpaths.</h2>
-                    <p>Each app can now have its own App Store links, screenshots, legal pages, and support copy without crowding the root site.</p>
-                </div>
-
-                <div class="app-directory">
-                    <a class="link-tile" href="apps/quickmealcheck/index.html">
-                        <span class="link-tile-label">Quick Meal Check</span>
-                        <span class="link-tile-text">Open the app page.</span>
+                <p class="eyebrow">Apps</p>
+                <div class="app-list">
+                    <a class="app-list-item" href="apps/quickmealcheck/index.html">
+                        <div class="app-list-info">
+                            <strong class="app-list-name">Quick Meal Check</strong>
+                            <p class="app-list-tagline">easy way to calculate, log and track your nutrition</p>
+                        </div>
+                        <span class="app-list-arrow" aria-hidden="true">→</span>
                     </a>
-                </div>
-            </section>
-
-            <section class="section section-split" id="about">
-                <div>
-                    <p class="eyebrow">About the setup</p>
-                    <h2>Static hosting stays simple when each app is self-contained.</h2>
-                    <p>
-                        This layout keeps shared presentation logic at the root while letting each app carry its own
-                        support and legal content. Adding another app becomes a matter of creating another folder
-                        under <code>apps/</code> and linking it from this homepage.
-                    </p>
-                </div>
-                <div class="stacked-links">
-                    <div class="link-tile link-tile-static">
-                        <span class="link-tile-label">Shared root</span>
-                        <span class="link-tile-text">Use the homepage for your studio identity, app directory, and general positioning.</span>
-                    </div>
-                    <div class="link-tile link-tile-static">
-                        <span class="link-tile-label">App subpages</span>
-                        <span class="link-tile-text">Keep App Store metadata links pointed at each app's own privacy and support pages.</span>
-                    </div>
                 </div>
             </section>
         </main>
 
         <footer class="site-footer">
             <div>
-                <p class="footer-title">Andi Apps</p>
-                <p class="footer-copy">Portfolio landing page for app-specific subpages.</p>
+                <p class="footer-copy">Apps built for personal use, published to help.</p>
             </div>
             <div class="footer-links">
-                <a href="#apps">Apps</a>
                 <a href="apps/quickmealcheck/index.html">Quick Meal Check</a>
             </div>
         </footer>
