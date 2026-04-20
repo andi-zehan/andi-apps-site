@@ -73,8 +73,9 @@ We receive limited subscription-related data needed to determine whether paid fe
 ## 5. Data Retention
 
 - Recent meal history saved by the app is stored locally on your device and is currently limited to roughly 30 days unless you delete entries sooner.
-- Body-metrics preferences and calorie-goal settings remain on your device until you change them, clear the app, or remove the app.
-- Subscription status and service-usage records may be retained on our backend for operational, accounting, fraud-prevention, and support purposes.
+- Body-metrics preferences, calorie-goal settings, and onboarding state are stored locally on your device until you change them, clear the app, remove the app, or use the in-app account deletion flow.
+- If you delete your account in the app, the app is designed to clear local meal history, saved body metrics, onboarding state, your backend user document, subscription records, usage records, and your Firebase Authentication account.
+- Primary account-scoped backend records are retained only while needed to operate the service and are deleted when in-app account deletion succeeds. Service-provider logs, caches, and backups may still persist for a limited period under provider retention policies.
 - Text-based meal submissions may appear in backend logs when needed for debugging, reliability, abuse prevention, or operations. Those logs can include account identifiers, request metadata, the submitted meal description, and the related analysis identifier.
 - In the current app implementation reviewed for this policy, submitted meal photos are transmitted for processing but are not intentionally saved by us as a long-term user photo archive. Reduced-size preview and thumbnail copies may still be stored locally on your device for journal/history features. Service providers may keep transient logs or retain data under their own policies.
 
@@ -82,8 +83,9 @@ We receive limited subscription-related data needed to determine whether paid fe
 
 - You can choose not to grant camera or photo-library access, although some features will not work without those permissions.
 - You can delete saved meal entries from the meal journal inside the app.
-- You can cancel subscriptions through your Apple account settings.
-- You can request account or backend-data deletion by contacting us at qmc-support@gmail.com.
+- You can delete your account from the Account section in the app.
+- Deleting your account does not cancel App Store billing. If you subscribed through Apple, you must still cancel the subscription through Apple's subscription management.
+- If you need help with privacy questions or the account-deletion flow, contact us at qmc-support@gmail.com.
 
 ## 7. Tracking, Advertising, and Sensitive Use
 
@@ -112,4 +114,4 @@ If we make material changes, we will update the date at the top of the policy an
 
 ## 12. Contact
 
-For privacy questions, support requests, or deletion requests, contact qmc-support@gmail.com.
+For privacy questions, support requests, or help using the in-app account-deletion flow, contact qmc-support@gmail.com.
