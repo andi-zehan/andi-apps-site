@@ -35,7 +35,7 @@ If you use the body metrics tools, the app stores information such as weight, he
 
 ### Subscription and service usage data
 
-To unlock paid features and enforce service limits, we process subscription and account-service data such as product identifier, original transaction identifier, subscription expiration date, subscription update timestamps, and daily usage records including a per-day analysis count, last-analysis timestamp, and UTC day key.
+To unlock paid features and enforce service limits, we process subscription and account-service data such as product identifier, original transaction identifier, subscription expiration date, subscription update timestamps, and daily usage records including a per-day analysis count, last-analysis timestamp, and UTC day key. These records support the current limit of up to 50 meal analyses per account per UTC service day.
 
 ### Permissions
 
