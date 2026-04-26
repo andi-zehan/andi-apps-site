@@ -85,7 +85,7 @@ We receive limited subscription-related data needed to determine whether paid fe
 - You can delete saved meal entries from the meal journal inside the app.
 - You can delete your account from the Account section in the app.
 - Deleting your account does not cancel App Store billing. If you subscribed through Apple, you must still cancel the subscription through Apple's subscription management.
-- If you need help with privacy questions or the account-deletion flow, contact us at qmc-support@gmail.com.
+- If you need help with privacy questions or the account-deletion flow, contact us at qmcsupport@gmail.com.
 
 ## 7. Tracking, Advertising, and Sensitive Use
 
@@ -114,4 +114,4 @@ If we make material changes, we will update the date at the top of the policy an
 
 ## 12. Contact
 
-For privacy questions, support requests, or help using the in-app account-deletion flow, contact qmc-support@gmail.com.
+For privacy questions, support requests, or help using the in-app account-deletion flow, contact qmcsupport@gmail.com.
